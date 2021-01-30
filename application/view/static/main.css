@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#green{
+    background-color: #009688;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+.row {margin: 0;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  margin: 15px;
+  text-align: center;
+  background-color: #FAFAFA;
+	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+#container p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #FAFAFA;
+}
+
+#container input {
+	width: 80%;
+	display: inline-block;
+	text-align: center;
+	border-radius: 7px;
+	background: #eee;
+	padding: 1em 2em;
+	outline: none;
+	border: none;
+	color: #222;
+    margin: 10px;
+	transition: 0.3s linear;
+}
+::placeholder{color: #999;}
+#container input:focus {background: rgba(0, 0, 333, 0.10);}
+
+#container button {
+	background-color: #FAFAFA;
+	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+	font-family: 'Abel', sans-serif;
+	padding: 0.5em 1.9em;
+	margin: 2.3em 0 0 0;
+	border-radius: 7px;
+	font-size: 1.4em;
+	cursor: pointer;
+	color: #212121;
+	font-size: 1em;
+	outline: none;
+	border: none;
+	transition: 0.3s linear;
+
+}
+#container button:hover{transform: translatey(2px);}
+#container button:active{transform: translatey(5px);}
