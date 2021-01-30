@@ -1,5 +1,7 @@
 from application import db
 
+# Classe responsável por gerenciar a estrutura do cliente
+
 
 class Client(db.Model):
     __tablename__ = "cliente"
