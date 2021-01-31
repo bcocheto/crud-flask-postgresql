@@ -10,6 +10,7 @@ app = Flask(
     template_folder=os.path.abspath("application/view/templates"),
 )
 
+
 # Configuração do banco de dados
 
 app.config[
@@ -23,3 +24,4 @@ from application.model.client_model import Client
 db.session.commit()
 
 from application.controller import home_controller
+from application.controller import add_controller

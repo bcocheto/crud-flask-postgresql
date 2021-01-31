@@ -10,13 +10,6 @@
 
 <body>
     <div class="row">
-        <div class="column">
-            <div class="card" id="green">
-                <div id="container">
-                    <p>Cadastro de clientes</p>
-                    <form>
-                        <input type="text" placeholder="Nome" required>
-                        <br>
                         <input type="text" placeholder="Razão Social" required>
                         <br>
                         <input type="text" placeholder="CNPJ" required>
@@ -24,14 +17,20 @@
                         <button>Enviar</button>
                     </form>
                 </div>
+                <li><a href="{{url_for('index')}}">Clientes</a></li>
+                <li><a href="{{url_for('add')}}">Cadastro</a></li>
+                <li><a href="#">Alterar</a></li>
+                <li><a href="#">Excluir</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="content">
+                {%block body%}
+                {%endblock%}
             </div>
-            <div class="card">..</div>
-        </div>
-        <div class="column">
-            <div class="card">..</div>
-            <div class="card">..</div>
-        </div>
+        </article>
     </div>
+
 </body>
 
 </html>

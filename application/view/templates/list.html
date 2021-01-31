@@ -1,0 +1,30 @@
+{%extends 'index.html'%}{%block body%}
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Razão Social</th>
+                <th>CNPJ</th>
+                <th>Data</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for i in clientes %}
+                <td>{{i.codigo}}</td>
+                <td>{{i.nome}}</td>
+                <td>{{i.razao_social}}</td>
+                <td>{{i.cnpj}}</td>
+                <td>{{i.data_inclusao}}</td>
+                <td><a href="/edit/{{i.id}}">Alterar</a> - <a href="/delete/{{i.id}}">Excluir</a> - <a
+                        href="/add/">Adicionar</a></td>
+
+                {%endfor%}
+            </tr>
+        <tbody>
+    </table>
+</div>
+{%endblock%}
