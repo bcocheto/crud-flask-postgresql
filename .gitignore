@@ -1,2 +1,4 @@
 
 *.pyc
+application/__pycache__/__init__.cpython-39.pyc
+application/controller/__pycache__/home_controller.cpython-39.pyc
