@@ -1,4 +1,5 @@
 from application import db
+import datetime
 
 # Classe responsável por gerenciar a estrutura do cliente
 
@@ -9,11 +10,9 @@ class Client(db.Model):
     nome = db.Column(db.String(64), unique=True)
     razao_social = db.Column(db.String(64), unique=True)
     cnpj = db.Column(db.String(64), unique=True)
-    data_inclusao = db.Column(db.DateTime)
+    data_inclusao = db.Column(db.DateTime, default=datetime.datetime.utcnow())
 
-    def __init__(self, codigo, nome, razao_social, cnpj, data_inclusao):
-        self.codigo = codigo
+    def __init__(self, nome, razao_social, cnpj):
         self.nome = nome
         self.razao_social = razao_social
         self.cnpj = cnpj
-        self.data_inclusao = data_inclusao

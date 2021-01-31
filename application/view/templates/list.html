@@ -12,18 +12,19 @@
             </tr>
         </thead>
         <tbody>
+            {% for i in clientes %}
             <tr>
-                {% for i in clientes %}
+
                 <td>{{i.codigo}}</td>
                 <td>{{i.nome}}</td>
                 <td>{{i.razao_social}}</td>
                 <td>{{i.cnpj}}</td>
                 <td>{{i.data_inclusao}}</td>
-                <td><a href="/edit/{{i.id}}">Alterar</a> - <a href="/delete/{{i.id}}">Excluir</a> - <a
-                        href="/add/">Adicionar</a></td>
+                <td><a href="/edit/{{i.id}}">Alterar</a> - <a href="/delete/{{i.id}}">Excluir</a></td>
 
-                {%endfor%}
             </tr>
+            {%endfor%}
+
         <tbody>
     </table>
 </div>

@@ -1,9 +1,10 @@
 from application import app
 from flask import render_template, current_app
+from application.model.client_model import Client
 
 
 @app.route("/")
 @app.route("/home")
 def index():
-
-    return render_template("list.html")
+    clientes = Client.query.all()
+    return render_template("list.html", clientes=clientes)
