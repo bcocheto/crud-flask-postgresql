@@ -19,9 +19,8 @@ app.config[
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
-from application.model.client_model import Client
-
-db.session.commit()
 
 from application.controller import home_controller
 from application.controller import add_controller
+from application.controller import delete_controller
+from application.controller import edit_controller
