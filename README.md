@@ -1,1 +1,1 @@
-# smart_nx
+CRUD feito em python utilizando Flask e PostgreSQL
